@@ -12,4 +12,8 @@
     this.socket.emit('message', {text: messageText});
   }
 
+  Chatroom.chatbox.prototype.makeUser = function(username) {
+    this.socket.emit('nicknameChangeRequest', {nickname: username})
+  }
+
 }());
